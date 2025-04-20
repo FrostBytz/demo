@@ -1,0 +1,205 @@
+/* Basic Reset & Body Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Keep body background simple for contrast */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: auto; /* Clear floats if needed */
+}
+
+/* Header Styles */
+header {
+    /* background: #e67e22; */ /* Original solid color */
+    color: #333; /* Changing text to dark for better readability on white gradient parts */
+    padding: 1.5rem 0;
+    text-align: center;
+    /* border-bottom: 3px solid #d35400; */ /* Remove solid border, gradient is enough */
+
+    /* --- Mexico Flag Gradient Options --- */
+    /* // dev note: Uncomment ONE of the following background lines to activate a gradient */
+
+    /* Variation 1: Linear Gradient (Left-to-Right Flag) - Sharp Stops */
+    background: linear-gradient(to right, #006847 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #CE1126 66.6%);
+
+    /* Variation 2: Linear Gradient (Top-to-Bottom Flag) - Sharp Stops */
+    /* background: linear-gradient(to bottom, #006847 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #CE1126 66.6%); */
+
+    /* Variation 3: Diagonal Linear Gradient (Smooth Blend) */
+    /* background: linear-gradient(135deg, #006847, #FFFFFF, #CE1126); */
+
+    /* Variation 4: Radial Gradient (White Center) */
+    /* background: radial-gradient(circle, #FFFFFF 20%, #006847 50%, #CE1126 80%); */
+
+    /* Variation 5: Repeating Linear Stripes (Diagonal) */
+    /* background: repeating-linear-gradient(45deg, #006847, #006847 15px, #FFFFFF 15px, #FFFFFF 30px, #CE1126 30px, #CE1126 45px); */
+
+    /* Variation 6: Simple Linear Blend (Green to Red) */
+    /* background: linear-gradient(to right, #2ecc71, #e74c3c); */ /* Using brighter web colors here */
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    /* Optional: Add a subtle text shadow for better contrast on complex backgrounds */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Navigation Styles (Keeping it simple for contrast) */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add shadow for depth */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 0;
+}
+
+#food-focus {
+    text-align: center;
+    margin-bottom: 2rem;
+    background: #fff; /* Give sections a background */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#food-focus h1 {
+    color: #c0392b; /* Keep the reddish color */
+    margin-bottom: 1rem;
+    font-size: 2.2em;
+}
+
+#food-focus p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gallery Styles */
+#gallery {
+    margin-bottom: 2rem;
+    background: #fff; /* Give sections a background */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#gallery h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #006847; /* Use flag green */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.image-grid figure {
+    background: #fdfdfd; /* Slightly off-white */
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0;
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.image-grid figure:hover {
+    transform: translateY(-5px); /* Lift image slightly on hover */
+}
+
+
+.image-grid img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+    background-color: #eee;
+    border: 1px dashed #ccc;
+    color: #aaa;
+    text-align: center;
+    line-height: 200px;
+    font-style: italic;
+    border-radius: 4px; /* Match figure radius */
+}
+
+.image-grid img[src=""]::before {
+    content: "Image Coming Soon";
+    display: block;
+}
+
+
+.image-grid figcaption {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Footer Styles */
+footer {
+    /* background: #333; */ /* Original solid color */
+    color: #eee; /* Lighter text for dark gradients */
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.9em;
+
+    /* --- Footer Gradient Options --- */
+    /* // dev note: Uncomment ONE of the following background lines */
+
+    /* Variation A: Darker Subtle Blend (Green/Red) */
+    background: linear-gradient(to right, #004d33, #222, #8b0000); /* Darker green, black/grey middle, dark red */
+
+    /* Variation B: Mirrored Header (Sharp Blocks) */
+    /* background: linear-gradient(to right, #006847 33.3%, #444 33.3%, #444 66.6%, #CE1126 66.6%); */ /* Use dark grey instead of white */
+
+    /* Variation C: Simple Dark Grey to Black */
+    /* background: linear-gradient(to bottom, #444, #111); */
+
+    /* Variation D: Repeating Dark Stripes */
+    /* background: repeating-linear-gradient(-45deg, #333, #333 10px, #444 10px, #444 20px); */
+
+}
